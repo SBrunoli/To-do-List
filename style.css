@@ -2,6 +2,10 @@
 
 :root {
   --white: #fff;
+  --black: #000;
+  --green: #47df47;
+  --red: rgb(239, 130, 130);
+  --cor-principal-light: rgb(115, 143, 245);
   --cor-principal: rgb(33, 64, 175);
   --cor-principal-hover: rgb(20, 39, 107);
 }
@@ -42,6 +46,8 @@ body {
   border-radius: 1rem;
 }
 
+/* formulário Start */
+
 #form {
   display: flex;
   justify-content: center;
@@ -76,4 +82,38 @@ body {
 #criar-tarefa:hover {
   background-color: var(--cor-principal-hover);
   transition: all ease 0.5s;
+}
+
+/* formulário end */
+
+/* filtros Start */
+
+#filtros {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+  width: 100%;
+}
+
+#filtros button {
+  width: 15%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: var(--white);
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.todas {
+  background-color: var(--cor-principal-light);
+}
+
+.concluidas {
+  background-color: var(--green);
+}
+
+.pendentes {
+  background-color: var(--red);
 }
