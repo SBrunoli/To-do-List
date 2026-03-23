@@ -4,7 +4,9 @@
   --white: #fff;
   --black: #000;
   --green: #47df47;
+  --green-hover: #34b434;
   --red: rgb(239, 130, 130);
+  --red-hover: rgb(165, 60, 60);
   --cor-principal-light: rgb(115, 143, 245);
   --cor-principal: rgb(33, 64, 175);
   --cor-principal-hover: rgb(20, 39, 107);
@@ -108,12 +110,30 @@ body {
 
 .todas {
   background-color: var(--cor-principal-light);
+  transition: all ease 0.2s;
+}
+
+.todas:hover {
+  background-color: var(--cor-principal);
+  transition: all ease 0.2s;
 }
 
 .concluidas {
   background-color: var(--green);
+  transition: all ease 0.2s;
+}
+
+.concluidas:hover {
+  background-color: var(--green-hover);
+  transition: all ease 0.2s;
 }
 
 .pendentes {
   background-color: var(--red);
+  transition: all ease 0.2s;
+}
+
+.pendentes:hover {
+  background-color: var(--red-hover);
+  transition: all ease 0.2s;
 }
