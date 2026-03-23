@@ -1,48 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-do List</title>
-    <script src="https://kit.fontawesome.com/6da04cfc57.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
+    <script
+      src="https://kit.fontawesome.com/6da04cfc57.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <main id="main">
-        <section class="funcionalidades">
-            <form action="#" id="form">
-                <input type="text" id="nome-tarefa" placeholder="Digite sua tarefa">
-                <input type="submit" id="criar-tarefa" value="Criar tarefa">
-            </form>
+      <section class="funcionalidades">
+        <form action="#" id="form">
+          <input type="text" id="nome-tarefa" placeholder="Digite sua tarefa" />
+          <input type="submit" id="criar-tarefa" value="Criar tarefa" />
+        </form>
 
-            <div id="filtros">
-                <button class="todas">Todas</button>
-                <button class="Concluídas">Concluídas</button>
-                <button class="Pendentes">Pendentes</button>
+        <div id="filtros">
+          <button class="todas">Todas</button>
+          <button class="concluidas">Concluídas</button>
+          <button class="pendentes">Pendentes</button>
+        </div>
+      </section>
+
+      <section class="lista-de-tarefas">
+        <div class="tarefa">
+          <div class="status-conteiner">
+            <label for="status"></label>
+            <input type="checkbox" id="status" />
+          </div>
+
+          <div class="tarefa">
+            <p>Tarefa de Exemplo</p>
+
+            <div class="icons">
+              <button>
+                <i
+                  class="fa-solid fa-pen-to-square"
+                  style="color: rgb(33, 64, 175)"
+                ></i>
+              </button>
+              <button>
+                <i
+                  class="fa-solid fa-trash"
+                  style="color: rgb(33, 64, 175)"
+                ></i>
+              </button>
             </div>
-        </section>
-
-        <section class="lista-de-tarefas">
-            <div class="tarefa">
-                <div class="status-conteiner">
-                    <label for="status"></label>
-                    <input type="checkbox" id="status">
-                </div>
-
-                <div class="tarefa">
-                    <p>Tarefa de Exemplo</p>
-
-                    <div class="icons">
-                        <button><i class="fa-solid fa-pen-to-square" style="color: rgb(33, 64, 175);"></i></button>
-                        <button><i class="fa-solid fa-trash" style="color: rgb(33, 64, 175);"></i></button>
-                    </div>
-                </div>
-                
-            </div>
-        </section>
+          </div>
+        </div>
+      </section>
     </main>
-
-
-</body>
+  </body>
 </html>
