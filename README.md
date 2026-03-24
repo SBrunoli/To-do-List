@@ -58,4 +58,3 @@ Este projeto é open source e pode ser usado livremente. 🎉
 ## 🔗 Links
 
 - Repositório SSH: `git@github.com:SBrunoli/To-do-List.git`  
-- GitHub Pages: [https://SBrunoli.github.io/To-do-List/](https://SBrunoli.github.io/To-do-List/)
