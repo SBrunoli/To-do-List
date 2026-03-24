@@ -54,6 +54,10 @@ class ToDo {
   handleClick(e) {
     const botao = e.target.closest("button");
     if (!botao) return;
+
+    if (botao.classList.contains("remover")) {
+      console.log("clicou em remover");
+    }
   }
 }
 
