@@ -68,6 +68,11 @@ class ToDo {
     if (botao.classList.contains("remover")) {
       this.removerTarefa(botao);
     }
+
+    //editar
+    if (botao.classList.contains("editar")) {
+      console.log("clicou em editar");
+    }
   }
 }
 
