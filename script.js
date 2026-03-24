@@ -7,6 +7,8 @@ class ToDo {
     this.lista = document.querySelector(".lista-de-tarefas");
     this.input = document.getElementById("nome-tarefa");
     this.form = document.getElementById("form");
+    this.carregarTarefas();
+    this.salvarTarefas();
 
     //previnir envio do form
     this.form.addEventListener("submit", (e) => {
@@ -50,6 +52,8 @@ class ToDo {
     this.lista.appendChild(tarefa);
 
     this.input.value = "";
+
+    this.salvarTarefas();
   }
 
   //remover tarefa Começo
@@ -104,6 +108,52 @@ class ToDo {
     container.remove();
   }
   //cancelar ediçào FIM
+
+  //salvar Tarefas Começo
+  salvarTarefas() {
+    const tarefas = [];
+
+    this.lista.querySelectorAll(".tarefa").forEach((tarefa) => {
+      const texto = tarefa.querySelector(".tarefa-p").textContent;
+      const concluida = tarefa.querySelector("input").checked;
+
+      tarefas.push({ texto, concluida });
+    });
+
+    localStorage.setItem("tarefas", JSON.stringify(tarefas));
+  }
+  //salvar Tarefas FIM
+
+  //Carregar Tarefas Começo
+  carregarTarefas() {
+    const tarefas = JSON.parse(localStorage.getItem("tarefas")) || [];
+
+    tarefas.forEach(({ texto, concluida }) => {
+      const tarefa = document.createElement("div");
+      tarefa.classList.add("tarefa");
+
+      tarefa.innerHTML = `
+      <label class="checkbox">
+        <input type="checkbox" ${concluida ? "checked" : ""} />
+        <span class="checkmark"></span>
+      </label>
+
+      <p class="tarefa-p">${texto}</p>
+
+      <div class="icons">
+        <button class="editar">
+          <i class="fa-solid fa-pen-to-square"></i>
+        </button>
+        <button class="remover">
+          <i class="fa-solid fa-trash"></i>
+        </button>
+      </div>
+    `;
+
+      this.lista.appendChild(tarefa);
+    });
+  }
+  //carregar tarefas Fim
 
   handleClick(e) {
     //identificar botão
