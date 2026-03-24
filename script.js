@@ -8,6 +8,7 @@ class ToDo {
     this.input = document.getElementById("nome-tarefa");
     this.form = document.getElementById("form");
 
+    //previnir envio do form
     this.form.addEventListener("submit", (e) => {
       e.preventDefault();
       this.adicionarTarefa();
@@ -51,12 +52,21 @@ class ToDo {
     this.input.value = "";
   }
 
+  //remover tarefa Começo
+  removerTarefa(botao) {
+    const tarefa = botao.closest(".tarefa");
+    tarefa.remove();
+  }
+  //remover tarefa FIM
+
   handleClick(e) {
+    //identificar botão
     const botao = e.target.closest("button");
     if (!botao) return;
 
+    //remover
     if (botao.classList.contains("remover")) {
-      console.log("clicou em remover");
+      this.removerTarefa(botao);
     }
   }
 }
