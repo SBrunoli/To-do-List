@@ -100,6 +100,7 @@ body {
 
 #filtros button {
   width: 20%;
+  min-width: 7rem;
   padding: 0.5rem;
   font-size: 1rem;
   color: var(--white);
@@ -152,8 +153,10 @@ body {
 .tarefa {
   display: flex;
   align-items: center;
+  flex-wrap: wrap; /* ESSENCIAL */
 
   width: 100%;
+  margin-top: 1rem;
   padding: 1.5rem 1rem;
   border-radius: 1rem;
 
@@ -241,3 +244,44 @@ body {
   opacity: 0.5;
 }
 /* tarefas end */
+
+/* conteiner de Edição de tarefa Start */
+.editar-container {
+  width: 100%;
+  margin-top: 1rem;
+
+  display: flex;
+  gap: 0.5rem;
+}
+
+.editar-container input {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+.editar-container button {
+  padding: 0.5rem 0.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  color: var(--white);
+}
+
+.editar-container .confirmar {
+  background-color: var(--green);
+}
+
+.editar-container .confirmar:hover {
+  background-color: var(--green-hover);
+}
+
+.editar-container .cancelar {
+  background-color: var(--red);
+}
+
+.editar-container .cancelar:hover {
+  background-color: var(--red-hover);
+}
+/* connteiner de ediçào de tarefa End */
