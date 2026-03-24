@@ -59,6 +59,52 @@ class ToDo {
   }
   //remover tarefa FIM
 
+  //abrir Edtior Começo
+  abrirEditor(botao) {
+    const tarefa = botao.closest(".tarefa");
+
+    if (tarefa.querySelector(".editar-container")) return;
+
+    const texto = tarefa.querySelector(".tarefa-p");
+
+    const container = document.createElement("div");
+    container.classList.add("editar-container");
+
+    container.innerHTML = `
+    <input type="text" value="${texto.textContent}">
+    <button class="confirmar">Salvar</button>
+    <button class="cancelar">Cancelar</button>
+  `;
+
+    tarefa.appendChild(container);
+
+    container.querySelector("input").focus();
+  }
+  //Abrir editor FIM
+
+  //confirmar edição começo
+  confirmarEdicao(botao) {
+    const container = botao.closest(".editar-container");
+    const tarefa = botao.closest(".tarefa");
+
+    const input = container.querySelector("input");
+    const texto = tarefa.querySelector(".tarefa-p");
+
+    const novoTexto = input.value.trim();
+    if (novoTexto === "") return;
+
+    texto.textContent = novoTexto;
+    container.remove();
+  }
+  //confirmar edição FIM
+
+  // Cacelar Ediçào começo
+  cancelarEdicao(botao) {
+    const container = botao.closest(".editar-container");
+    container.remove();
+  }
+  //cancelar ediçào FIM
+
   handleClick(e) {
     //identificar botão
     const botao = e.target.closest("button");
@@ -71,7 +117,15 @@ class ToDo {
 
     //editar
     if (botao.classList.contains("editar")) {
-      console.log("clicou em editar");
+      this.abrirEditor(botao);
+    }
+
+    if (botao.classList.contains("confirmar")) {
+      this.confirmarEdicao(botao);
+    }
+
+    if (botao.classList.contains("cancelar")) {
+      this.cancelarEdicao(botao);
     }
   }
 }
