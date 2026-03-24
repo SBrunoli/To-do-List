@@ -50,6 +50,11 @@ class ToDo {
 
     this.input.value = "";
   }
+
+  handleClick(e) {
+    const botao = e.target.closest("button");
+    if (!botao) return;
+  }
 }
 
 new ToDo();
