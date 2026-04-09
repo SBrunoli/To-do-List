@@ -1,49 +1,63 @@
-# 📝 To-Do List
+# 📝 To-Do List — Gerenciador de Tarefas
 
 <p align="center">
-  <img width="793" alt="image" src="https://github.com/user-attachments/assets/8afc72f3-0988-4669-aba4-7702e9825f12" />
+  <img src="https://img.shields.io/badge/Status-Concluído-44cc11?style=for-the-badge" alt="Status Concluído">
+  </br>
+  <img src="https://skillicons.dev/icons?i=html,css,js" />
 </p>
-
-> Uma aplicação simples de lista de tarefas desenvolvida com foco em manipulação de DOM e persistência de dados no **Local Storage** do navegador! 💾
 
 ---
 
-## 🔗 Acesse o Projeto
-Para visualizar a aplicação em funcionamento, clique no botão abaixo:
+## 📸 Preview do Projeto
+
+<p align="center">
+  <img width="100%" alt="Interface do To-Do List" src="https://github.com/user-attachments/assets/8afc72f3-0988-4669-aba4-7702e9825f12" />
+</p>
 
 <p align="center">
   <a href="https://sbrunoli.github.io/To-do-List/" target="_blank">
-    <img src="https://img.shields.io/badge/Visualizar_Projeto-2ea44f?style=for-the-badge&logo=github&logoColor=white" />
+    <img src="https://img.shields.io/badge/TESTAR_APLICAÇÃO_AGORA-2ea44f?style=for-the-badge&logo=github&logoColor=white" />
   </a>
 </p>
 
----
-
-## 🚀 Funcionalidades
-
-| Emoji | Funcionalidade |
-|-------|----------------|
-| ➕ | **Criar** tarefas rapidamente |
-| ✏️ | **Editar** e atualizar o texto das tarefas |
-| 🗑️ | **Excluir** tarefas da lista |
-| ✅ | Marcar tarefas como **concluídas** |
-| 🔍 | **Filtrar**: Ver Todas, Concluídas ou Pendentes |
-| 💾 | **Persistência**: Seus dados ficam salvos mesmo ao fechar o navegador |
+> Uma aplicação intuitiva desenvolvida para facilitar a organização diária, com foco total em manipulação de DOM e persistência de dados no **Local Storage**. 💾
 
 ---
 
-## 🛠️ Tecnologias
+## 🛠️ Tecnologias e Ferramentas
 
-Abaixo, as tecnologias utilizadas para construir este projeto:
+Para a construção deste projeto, utilizei:
 
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=html,css,js,font-awesome" />
-</p>
+* <img src="https://skillicons.dev/icons?i=html" height="32"> **HTML5:** Estrutura para os elementos da lista e filtros.
+* <img src="https://skillicons.dev/icons?i=css" height="32"> **CSS3:** Interface limpa, moderna e totalmente responsiva.
+* <img src="https://skillicons.dev/icons?i=js" height="32"> **JavaScript:** Lógica de CRUD, filtros dinâmicos e armazenamento local.
+* <img src="https://skillicons.dev/icons?i=font-awesome" height="32"> **Font Awesome:** Ícones para ações de edição, exclusão e conclusão.
+
+---
+
+## 🚀 Funcionalidades Principais
+
+| Emoji | Funcionalidade | Descrição |
+|:---:|---|---|
+| ➕ | **Criar** | Adição instantânea de novas tarefas à lista. |
+| ✏️ | **Editar** | Permite renomear tarefas já existentes. |
+| 🗑️ | **Excluir** | Remoção de itens com um clique. |
+| ✅ | **Concluir** | Marcação visual para tarefas finalizadas. |
+| 🔍 | **Filtrar** | Alternância entre: Todas, Concluídas ou Pendentes. |
+| 💾 | **Persistência** | Seus dados são salvos no navegador e não somem ao dar F5. |
 
 ---
 
 ## 🎯 Objetivo do Projeto
 
-Este projeto foi criado para consolidar conhecimentos em **JavaScript moderno**, manipulação do **DOM**, **Local Storage**, e boas práticas de UI/UX, criando um sistema funcional que serve de base para aplicações web mais complexas.
+Este projeto foi fundamental para consolidar conceitos de **JavaScript Vanilla**, trabalhando intensamente com eventos de escuta, criação dinâmica de elementos e a API de Local Storage para simular um banco de dados simples no lado do cliente.
 
 ---
+
+## 🖥️ Como rodar localmente
+
+```bash
+# Clone o repositório
+git clone git@github.com:SBrunoli/To-do-List.git
+
+# Entre na pasta e abra o index.html no navegador
